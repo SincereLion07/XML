@@ -1,1 +1,11 @@
-
+<BugReport>
+    <Project>Ad-hoc testing of android app</Project>
+    <ID>17</ID>
+    <Reporter>Elena Slesareva</Reporter>
+    <Severity>Blocker</Severity>
+    <Priority>High</Priority>
+    <BugSummary>Application installation error</BugSummary>
+    <StepToRetroduce>1) Download application, 2) Click for instal</StepToRetroduce>
+    <ExpectedResult>Installing the app on the phone</ExpectedResult>
+    <ActualResult>An error message appears:There was a problem parsing the package</ActualResult>
+</BugReport>
