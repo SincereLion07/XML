@@ -1,0 +1,91 @@
+XML
+ 21. Создать внешний репозиторий c названием XML.
+ 22. Клонировать репозиторий XML на локальный компьютер.
+git clone https://github.com/SincereLion07/XML.git
+cd XML/
+
+ 23. Внутри локального XML создать файл “new.xml”.
+touch new.xml
+
+ 24. Добавить файл под гит.
+git add new.xml
+
+ 25. Закоммитить файл.
+git commit -m "added empty file new.xml"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+cat > new.xml << EOF
+<AboutMe>
+   <lastName>Slesareva</lastName>
+   <firstName>Elena</firstName>
+   <fathersName>Urievna</fathersName>
+   <quantityofPets>0</quantityofPets>
+   <desiredSalary>$2000</desiredSalary>
+</AboutMe>
+EOF
+
+ 28. Отправить изменения на внешний репозиторий.
+git status
+git add new.xml
+git commit -m "filled file new.xml"
+git push
+
+ 29. Создать файл preferences.xml
+touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+cat > preferences.xml << EOF
+<MyPreferences>
+    <favoriteFilm>A lot of</favoriteFilm>
+    <favoriteSerial>Legacy</favoriteSerial>
+    <favoriteFood>Seafood</favoriteFood>
+    <favoriteSeason>Autumn</favoriteSeason>
+    <nextCountryForTrip>Portugal</nextCountryForTrip>
+</MyPreferences>
+EOF
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+cat >> skills.xml
+<myskills>
+    <skil1>Basic theory</skil1>
+    <skill2>HTTP requests</skill2>
+    <skill3>Programming language Python</skill3>
+    <skill4>SQL Basics</skill4>
+    <skill5>Mobile, API, Load testing</skill5>
+    <skill6>Data base Postgres</skill6>
+    <skill7>Access to remote server</skill7>
+    <skill8>Building android apps on Android Studio</skill8>
+    <skill9>Scrum development methodology</skill9>
+    <andOthersSkills>Git, Terminal Git Bash, Postman, ADB, JSON, XML, etc</andOthersSkills>
+</myskills>
+Ctrl+C
+
+ 32. Сделать коммит в одну строку.
+git add .
+git commit -am "added new file skills and preferences"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+<BugReport>
+    <Project>Ad-hoc testing of android app</Project>
+    <ID>17</ID>
+    <Reporter>Elena Slesareva</Reporter>
+    <Severity>Blocker</Severity>
+    <Priority>High</Priority>
+    <BugSummary>Application installation error</BugSummary>
+    <StepToRetroduce>1) Download application, 2) Click for instal</StepToRetroduce>
+    <ExpectedResult>Installing the app on the phone</ExpectedResult>
+    <ActualResult>An error message appears:There was a problem parsing the package</ActualResult>
+</BugReport>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 38. Синхронизировать внешний и локальный репозиторий XML
+git fetch
+git pull
